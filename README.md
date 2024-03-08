@@ -1,16 +1,42 @@
-# amogus
+# Создание Git-репозитория
+Обычно вы получаете репозиторий Git одним из двух способов:  
+1. Вы можете взять локальный каталог, который в настоящее время не находится под версионным контролем, и превратить его в репозиторий Git, либо  
+2. Вы можете клонировать существующий репозиторий Git из любого места.
+   
+В обоих случаях вы получите готовый к работе Git репозиторий на вашем компьютере.
 
-A new Flutter project.
+## Создание репозитория в существующем каталоге
+Если у вас уже есть проект в каталоге, который не находится под версионным контролем Git, то для начала нужно перейти в него. Если вы не делали этого раньше, то для разных операционных систем это выглядит по-разному:  
 
-## Getting Started
+1. для Linux:
+```
+$ cd /home/user/my_project  
+```  
+2. для macOS:
+```  
+$ cd /Users/user/my_project
+```
+3. для Windows:
+```
+$ cd C:/Users/user/my_project
+```
 
-This project is a starting point for a Flutter application.
+А затем выполните команду:  
+```
+$ git init
+```
+Эта команда создаёт в текущем каталоге новый подкаталог с именем .git, содержащий все необходимые файлы репозитория — структуру Git репозитория. На этом этапе ваш проект ещё не находится под версионным контролем.  
 
-A few resources to get you started if this is your first Flutter project:
+Если вы хотите добавить под версионный контроль существующие файлы (в отличие от пустого каталога), вам стоит добавить их в индекс и осуществить первый коммит изменений. Добиться этого вы сможете запустив команду git add несколько раз, указав индексируемые файлы, а затем выполнив git commit:  
+```
+$ git add *.c  
+$ git add LICENSE  
+$ git commit -m 'Initial project version'
+```  
+Теперь у вас есть Git-репозиторий с отслеживаемыми файлами и начальным коммитом.  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+   
+   
+
